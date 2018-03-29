@@ -133,13 +133,13 @@ const StyledTitle = styled.h1`
 
 const StyledPara = styled.p`
   line-height: 1.5;
-  font-family: "europa";
+  font-family: europa;
   font-weight: 400;
   color: #666;
   font-size: 16px;
   margin-bottom: 24px;
   transform: translateY(100%);
-  animation: ${slideUp} 1.35s cubic-bezier(.5,.25,.11,1) forwards;
+  animation: ${slideUp} 1.35s cubic-bezier(.5,0,0,1) forwards;
   animation-delay: 1.2s;
 `
 
