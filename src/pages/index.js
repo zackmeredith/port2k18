@@ -138,7 +138,8 @@ const StyledPara = styled.p`
   color: #666;
   font-size: 16px;
   margin-bottom: 24px;
-  animation: ${slideUp} 1.4s cubic-bezier(.54,.09,.11,1) forwards;
+  transform: translateY(100%);
+  animation: ${slideUp} 1.35s cubic-bezier(.5,.25,.11,1) forwards;
   animation-delay: 1.2s;
 `
 
