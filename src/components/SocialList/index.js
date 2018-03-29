@@ -25,7 +25,7 @@ const SocialListItem = styled.li`
 `
 
 const StyledAnchor = styled.a`
-  color: #E6E1E1;
+  color: #EBECED;
   padding: 8px 4px;
   margin-left: -4px;
   transition: color .2s ease-out;

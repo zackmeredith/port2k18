@@ -60,7 +60,7 @@ const squareAfterAnim = keyframes`
 `
 
 const StyledAnchor = styled.a`
-  color: #E6E1E1;
+  color: #EBECED;
   padding-bottom: 2px;
   text-decoration: none;
   background-image: linear-gradient(140deg, rgb(255, 71, 77), rgb(255, 71, 77));
