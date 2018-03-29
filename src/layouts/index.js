@@ -24,7 +24,7 @@ class TemplateWrapper extends React.Component {
    return (
      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
        <Helmet
-         title="Gatsby Default Starter"
+         title="Zack Meredith — Designer"
          meta={[
            { name: 'description', content: 'Sample' },
            { name: 'keywords', content: 'sample, something' },
