@@ -122,13 +122,17 @@ const StyledWrapper = styled.div`
 const StyledTitle = styled.h1`
   font-family: "utopia-std", serif;
   font-weight: 700;
-  font-size: 96px;
+  font-size: 72px;
   line-height: 1;
   margin-bottom: 16px;
   color: black;
   transform: translateY(100%);
   animation: ${slideUp} 1.4s cubic-bezier(.54,.09,.11,1) forwards;
   animation-delay: 1s;
+
+  @media (min-width: 700px) {
+    font-size: 96px;
+  }
 `
 
 const StyledPara = styled.p`
