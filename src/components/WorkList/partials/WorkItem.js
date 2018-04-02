@@ -36,15 +36,15 @@ const WorkItem = ({ image, title, type, brand, link }) => (
       textDecoration: 'none',
     }}>
 
-    <img style={{marginBottom: 0, width: '100%', display: 'block', height: 'auto'}} src={image} />
+    <div>
 
-
-        {/* <div style={{
+{/* 
+        <div style={{
           padding: '24px 16px',
-
+          flex: 3,
+          width: '100%',
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', }}>
-            <h3 style={{ fontFamily: 'europa', marginBottom: 0, fontSize: 20, fontWeight: 400 }}>{title}</h3>
             <BrandCircle brand={brand} />
           </div>
 
@@ -56,9 +56,15 @@ const WorkItem = ({ image, title, type, brand, link }) => (
             color: '#999',
             fontWeight: 400,
           }}>{ type }</span>
+          <h3 style={{ fontFamily: 'utopia-std', marginBottom: 0, fontSize: 24, fontWeight: 700 }}>{title}</h3>
+
 
         </div> */}
 
+        <div>
+          <img style={{marginBottom: 0, flex: 1, display: 'block', height: 'auto', maxWidth: '600px' }} src={image} />
+        </div>
+      </div>
 
     </Link>
   </ItemWrapper>

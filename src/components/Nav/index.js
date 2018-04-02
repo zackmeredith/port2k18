@@ -6,7 +6,7 @@ const StyledLink = styled(Link)`
   font-family: "europa";
   line-height: 1;
   font-weight: 400;
-  color: #595959;
+  color: #000;
   text-decoration: none;
   font-size: 16px;
   background-image: linear-gradient(140deg, rgba(255, 71, 77, 0), rgba(255, 71, 77, 0));
@@ -24,7 +24,7 @@ const StyledLink = styled(Link)`
 const Nav = () => (
   <div>
     <StyledLink to="/Work" style={{
-      marginRight: '1rem',
+      marginRight: '1.5rem',
     }}>
       Work
     </StyledLink>

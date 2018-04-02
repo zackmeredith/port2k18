@@ -73,7 +73,7 @@ const StyledAnchor = styled.a`
   &:hover {
     color: #FF474D;
   }
-`;
+`
 
 const StyledWrapper = styled.div`
   margin-top: 96px;
@@ -117,7 +117,7 @@ const StyledWrapper = styled.div`
     transform: translateX(-100%) scaleX(3);
     animation: ${squareAfterAnim} 4.5s .15s cubic-bezier(.54,.09,.11,1) forwards;
   }
-`;
+`
 
 const StyledTitle = styled.h1`
   font-family: "utopia-std", serif;
