@@ -29,7 +29,7 @@ let PortPDF ;
 const StyledTitle = styled.h1`
   font-family: "utopia-std", serif;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1;
   margin-bottom: 16px;
   color: black;
