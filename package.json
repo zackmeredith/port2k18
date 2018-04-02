@@ -4,15 +4,16 @@
   "version": "1.0.0",
   "author": "Zack Meredith",
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.4",
-    "@fortawesome/fontawesome-free-brands": "^5.0.8",
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.9",
     "@fortawesome/react-fontawesome": "0.0.17",
-    "gatsby": "^1.9.238",
+    "gatsby": "^1.9.241",
     "gatsby-image": "^1.0.42",
-    "gatsby-link": "^1.6.39",
-    "gatsby-plugin-react-helmet": "^2.0.8",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.9",
+    "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-plugin-sharp": "^1.6.41",
-    "gatsby-plugin-styled-components": "^2.0.9",
+    "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-filesystem": "^1.5.27",
     "gatsby-transformer-sharp": "^1.6.22",
     "lodash": "^4.17.5",
@@ -20,7 +21,7 @@
     "react-helmet": "^5.2.0",
     "react-pdf": "^3.0.4",
     "react-typekit": "^1.1.3",
-    "styled-components": "^3.2.3",
+    "styled-components": "^3.2.5",
     "webfontloader": "^1.6.28"
   },
   "keywords": [
@@ -35,7 +36,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.11.1",
-    "tachyons": "^4.9.1"
+    "prettier": "^1.11.1"
   }
 }
