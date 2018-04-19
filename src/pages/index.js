@@ -60,7 +60,7 @@ const squareAfterAnim = keyframes`
 `
 
 const StyledAnchor = styled.a`
-  color: #EBECED;
+  color: #FF474D;
   padding-bottom: 2px;
   text-decoration: none;
   background-image: linear-gradient(140deg, rgb(255, 71, 77), rgb(255, 71, 77));
@@ -72,6 +72,10 @@ const StyledAnchor = styled.a`
 
   &:hover {
     color: #FF474D;
+  }
+
+  @media (min-width: 700px) {
+    color: #EBECED;
   }
 `
 
@@ -95,7 +99,7 @@ const StyledWrapper = styled.div`
     position: absolute;
     top: -20%;
     z-index: -1;
-    left: calc(55%);
+    left: calc(65%);
     width: 150%;
     height: 150%;
     background-color: #f9fbfc;
@@ -103,6 +107,10 @@ const StyledWrapper = styled.div`
     ${'' /* transform: scaleX(0); */}
     ${'' /* transform-origin: right; */}
     animation: ${squareBeforeAnim} .75s 1.75s ease-in forwards;
+
+    @media (min-width: 700px) {
+      left: calc(55%);
+    }
   }
 
   &:after {
