@@ -1,9 +1,9 @@
 import React from 'react'
+// import { Link } from 'gatsby'
 import styled, { keyframes } from 'styled-components'
-import Logo from '../components/Logo'
+import Layout from '../components/layout'
 import SocialList from '../components/SocialList'
-import WorkList from '../components/WorkList'
-// import Link from 'gatsby-link'
+// import WorkList from '../components/WorkList'
 
 const opacityAnim = keyframes`
   0% {
@@ -12,6 +12,16 @@ const opacityAnim = keyframes`
 
   100% {
     opacity: 1;
+  }
+`
+
+const slideUp = keyframes`
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 `
 
@@ -24,16 +34,6 @@ const squareBeforeAnim = keyframes`
   100% {
     opacity: 1;
     ${'' /* transform: scaleX(1); */}
-  }
-`
-
-const slideUp = keyframes`
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(0);
   }
 `
 
@@ -120,7 +120,7 @@ const StyledWrapper = styled.div`
     z-index: 1;
     left: 0;
     width: 150%;
-    height: 150%;
+    height: 200%;
     background-color: #fff;
     transform: translateX(-100%) scaleX(3);
     animation: ${squareAfterAnim} 4.5s .15s cubic-bezier(.54,.09,.11,1) forwards;
@@ -155,9 +155,14 @@ const StyledPara = styled.p`
   animation-delay: 1.2s;
 `
 
-const IndexPage = () => (
-  <div>
+// const StyledMask = styled.div`
+//   opacity: 0;
+//   animation: ${opacityAnim} 1.35s .15s cubic-bezier(.5,0,0,1) forwards;
+//   animation-delay: 2.5s;
+// `
 
+const IndexPage = () => (
+  <Layout>
     <StyledWrapper>
       <StyledTitle>Hey<span style={{ }}>,</span><br/>I’m Zack</StyledTitle>
       <StyledPara>A San Francisco based designer and musician interested in building products for social good. If you’re interested in working together, shoot me an email <StyledAnchor href="mailto:zacharybmeredith@gmail.com">here</StyledAnchor>.
@@ -169,14 +174,11 @@ const IndexPage = () => (
         marginBottom: 32,
         background: "#E6E1E1",
       }} /> */}
-
-
       <SocialList />
     </StyledWrapper>
 
-    {/* <WorkList /> */}
-
-  </div>
+    {/* <StyledMask><WorkList /></StyledMask> */}
+  </Layout>
 )
 
 export default IndexPage

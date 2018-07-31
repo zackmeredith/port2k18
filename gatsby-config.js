@@ -3,17 +3,33 @@ module.exports = {
     title: 'Zack Meredith — Designer',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        defaultLayout: require.resolve(
+          "./src/components/case-layout.js"
+        ),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `img`,
         path: `${__dirname}/src/img/`
-      }
+      },
     },
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-react-next',
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'bav5xck'
+        }
+      }
+    },
   ],
-};
+}

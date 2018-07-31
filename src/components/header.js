@@ -1,8 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import { Link } from 'gatsby'
 import styled from 'styled-components'
-import Logo from '../Logo'
-import Nav from '../Nav'
+import Logo from './Logo'
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -19,7 +18,6 @@ const StyledWrapper = styled.div`
 const Header = () => (
   <StyledWrapper>
     <Logo />
-    {/* <Nav /> */}
   </StyledWrapper>
 )
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+// import Link from 'gatsby-link'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faTwitter, faDribbble, faGithub, faInstagram, faCodepen, faLinkedin } from '@fortawesome/fontawesome-free-brands'
 import styled, { keyframes } from 'styled-components'

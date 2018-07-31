@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import { render } from 'react-dom'
-import { Document, Page } from 'react-pdf/dist/entry.webpack'
+import { Document, Page } from 'react-pdf'
 import throttle from 'lodash.throttle'
 import portFile from '../../img/port/port.pdf'
 
 class PortPDF extends Component {
   state = {
     numPages: null,
-    pageNumber: 1,
-    width: null,
     pagesRendered: null,
   }
 
@@ -38,7 +35,7 @@ class PortPDF extends Component {
   }));
 
   render() {
-    const { pageNumber, numPages, width, pagesRendered } = this.state;
+    const { numPages, pagesRendered } = this.state;
 
   /**
     * The amount of pages we want to render now. Always 1 more than already rendered,

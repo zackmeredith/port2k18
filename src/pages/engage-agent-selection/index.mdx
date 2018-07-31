@@ -1,0 +1,125 @@
+import exploreHeader from './assets/exploreHeader.jpg'
+import explore4 from './assets/explore-4.png'
+import explorePlan from './assets/explore-plan.png'
+
+<img className={'full-width'} style={{marginTop: 0, marginBottom: 0, flex: 1, display: 'block', height: 'auto'}} src={exploreHeader} />
+<br/>
+
+# Engage — <br/>Agent Selection
+
+---
+
+**TLDR:** Customers could benefit from a more powerful way to find the best agent for them. I worked with product managers and researches to plan and design a roadmap of features to improve this experience. Through this project I led Design Sprint activities, created multiple prototypes, hi-fidelity designs, and a short/medium/long staggered plan for implementation.
+
+---
+<br />
+
+## Understanding
+
+To get a better idea of why someone might choose an agent we sent out a survey to the users of our pilot app.
+
+
+**Onboarding survey question:** What was the single most important factor when choosing a BFF?
+
+Primary reasons:
+- Recommendation from other people
+- Experience - (including previous experience with that agent)
+- Existing relationship with agent
+- Similar interests
+
+### Design Sprint activities
+
+I’ve found certain Design Sprint activities extremely useful, but often time or the scope of the problem lead to a more selective collection in place of the full week. The most effective use of these activities depends on what you’re trying to solve.
+
+I’ve found these sessions to have the most forward momentum when we leave with something visualized — regardless of the level of fidelity. Because of this I focused mainly on a How Might We session and Crazy 8s.
+
+One of the main problems to consider was the differing needs/wants of our customer banks in relation to what user research told us end customers needed. I started by grouping the needs of financial institutions and customers to find commonalities.
+
+
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1526159714204_IMG_8715.JPG)
+
+
+After that we began a How Might We session to get ideas on the board and get everyone thinking on the same page. We found that the most useful areas of refinement were:
+
+
+- Location
+- Expertise
+- Agent name
+
+
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1526159757784_IMG_1179.JPG)
+
+Once we had completed the HMWs and Crazy 8's I got the team to get into groups and flesh out our favorite concepts. Leaving a session like this with something tangible that everyone feels like they can work towards has often been incredibly beneficial for the forward momentum of the project.
+
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1526159751243_IMG_1195.JPG)
+
+
+## Prototypes
+
+After reviewing our concepts I decided to test two very different versions of an onboarding/agent selection process. We were interested in both approaches, but wanted to compare usability and get a better sense of how they might feel when visualized.
+
+
+### Conversational Prototype
+
+The first was the conversational tapback approach in the vein of Penny among others. The appeal of this approach was that if the whole app is about conversation then why not get people into a conversational interface as soon as possible.
+
+I started this design prototype by planning out all the different paths and flows a person could go through based on a series of responses.
+
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1526161414205_IMG_1140.JPG)
+
+I then created a clickable prototype to test the usefulness of this interface and interaction model. The user is greeted by an automated agent and given instructions through messages. All interactions happen through tapback responses, simple inputs, and agent cards returned directly in the faux conversation.
+
+<img className={'full-width'} style={{flex: 1, display: 'block', height: 'auto'}} src={'https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1528751594504_Conv.png'} />
+
+
+While most people who tested the conversational onboarding found it interesting or novel, not many found it more useful for actually accomplishing the goal.
+
+
+### Exploratory Prototype
+I was also designing the second prototype in parallel. This prototype was focused on a more exploratory model of interaction — giving the user a way to explore multiple different refinements such as locations or expertise in succession or together.
+
+
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1526161414879_IMG_7602.JPG)
+
+
+The initial flow was comprised of a few main parts:
+
+- An educational modal explaining what agent selection meant.
+  - This choice isn’t forever, but this person is with you for as long as you want
+- The main selection home screen
+  - A powerful search bar for names, locations, and expertise
+  - A list of currently available agents
+    - These are for the people who just need and are less concerned with where it comes from
+  - A list of cards that link to expertise pages
+  - A Near You section for finding an local agent
+- Expertise pages explaining the expertise and returning a searchable list of agents with that tag
+
+
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1529440583921_Screenshot+2018-06-18+14.58.25.png)
+
+This prototype allowed for much more flexible use cases and seemed to fit with how someone might expect to accomplish this task. People that we tested with were more likely to explore multiple areas of expertise, locations, or search options than in the conversational prototype.
+
+## Solution design
+
+When bringing these designs to a higher fidelity I also made more considerations around copywriting. I tried to make the empty states of the input fields better represent the idea that they aren't all necessary to show results while also keeping the placeholder hints around what type of information should be entered.
+
+I also brought the "Pick an agent for me" into the main page as well instead of just the modal. For someone who quickly dismissed the modal or decided they just wanted to get help quickly this could be very valuable.
+
+<img className={'full-width'} style={{flex: 1, display: 'block', height: 'auto'}} src={explore4} />
+
+## Short, Medium, Long goals
+To ensure we could actually implement the features how we envisioned them I created a 3 step approach to work towards our full design.
+
+<img className={'full-width'} style={{flex: 1, display: 'block', height: 'auto'}} src={explorePlan} />
+
+### Animation Prototyping
+I also spent time working on some prototype animations for our future vision of the flow. Getting the team excited about the future helped build motivation for working towards a less compromised approach.
+
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1529448207157_2018-03-14+09_27_15.gif)
+
+
+While it's not something we can implement immediately, having a north star allowed us to lay groundwork and prioritize our sprints appropriately.
+
+We've built phase one of the plan and are refining an intermediary step before building phase the second phase.
+
+An important takeaway/reminder from this for me was that interaction models that excite team members should always be checked with external people as well. Just because something is interesting doesn't make it more useful.

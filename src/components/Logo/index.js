@@ -12,16 +12,6 @@ const rotate360 = keyframes`
   }
 `
 
-const scaleAnim = keyframes`
-  from {
-    transform: scale(0);
-  }
-
-  to {
-    transform: scale(1);
-  }
-`
-
 const opacityAnim = keyframes`
   0% {
     opacity: 0;

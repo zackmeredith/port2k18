@@ -1,30 +1,28 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-let PortPDF ;
+import Layout from '../components/layout'
+import PortPDF from '../components/PortPDF'
 
- class PortPDFWrapper extends Component {
-  constructor () {
-    super()
-    this.state = { mount : false } //To rerender
-  }
-  componentDidMount () {
-    //require.ensure([], function(require) {
-    PortPDF = require("../components/PortPDF");
-    //});
-    this.setState( { mount : true }); //To rerender.
-  }
-  render () {
-    if (PortPDF !== undefined ) {
-      return (
-        <PortPDF />
-      )
-    } else {
-      return (
-        null
-      )
-    }
-  }
-}
+// let PortPDF
+
+// class PortPDFWrapper extends Component {
+//   constructor () {
+//     super()
+//     this.state = { mount : false } //To rerender
+//   }
+//   componentDidMount () {
+//     //require.ensure([], function(require) {
+//     PortPDF = require("../components/PortPDF");
+//     //});
+//     this.setState( { mount : true }); //To rerender.
+//   }
+//   render () {
+//     return (
+//       <PortPDF />
+//     )
+//   }
+// }
 
 const StyledTitle = styled.h1`
   font-family: "utopia-std", serif;
@@ -80,13 +78,15 @@ const StyledAnchor = styled.a`
   }
 `
 const Port = () => (
-  <StyledWrapper>
-    <HeaderWrapper>
-      <StyledTitle>Case studies — where ya at?</StyledTitle>
-      <StyledPara>While this site is being refreshed I've included a static version of a keynote that I've used to present projects before. You can find visual/motion work on my <StyledAnchor target="_blank" href="https://dribbble.com/zackmeredith/">dribbble</StyledAnchor>. Feel free to dig through — if you'd like to hear the words that go along with this shoot me an email <StyledAnchor href="mailto:zacharybmeredith@gmail.com">here</StyledAnchor>.</StyledPara>
-    </HeaderWrapper>
-    <PortPDFWrapper />
-  </StyledWrapper>
+  <Layout>
+    <StyledWrapper>
+      <HeaderWrapper>
+        <StyledTitle>Case studies — where ya at?</StyledTitle>
+        <StyledPara>While this site is being refreshed I've included a static version of a keynote that I've used to present projects before. You can find visual/motion work on my <StyledAnchor target="_blank" href="https://dribbble.com/zackmeredith/">dribbble</StyledAnchor>. Feel free to dig through — if you'd like to hear the words that go along with this shoot me an email <StyledAnchor href="mailto:zacharybmeredith@gmail.com">here</StyledAnchor>.</StyledPara>
+      </HeaderWrapper>
+      <PortPDF />
+    </StyledWrapper>
+  </Layout>
 )
 
 export default Port
