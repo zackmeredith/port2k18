@@ -33,9 +33,15 @@ const StyledWrapper = styled.div`
 
   & .full-width, & .full-width > img {
     max-width: 1200px !important;
-    width: calc(100% + 16rem);
-    margin-left: calc(-8rem);
-    margin-right: calc(-8rem);
+    width: calc(100% + 4rem);
+    margin-left: calc(-2rem);
+    margin-right: calc(-2rem);
+
+    @media (min-width: 700px) {
+      width: calc(100% + 16rem);
+      margin-left: calc(-8rem);
+      margin-right: calc(-8rem);
+    }
   }
 
   & hr {
@@ -97,8 +103,12 @@ const StyledWrapper = styled.div`
     font-family: europa;
     font-weight: 400;
     color: #666;
-    font-size: 20px;
     margin-bottom: 24px;
+    font-size: 16px;
+
+    @media (min-width: 700px) {
+      font-size: 20px;
+    }
   }
 
   & ul {
@@ -108,8 +118,12 @@ const StyledWrapper = styled.div`
     font-family: europa;
     font-weight: 400;
     color: #666;
-    font-size: 20px;
     margin-bottom: 40px;
+    font-size: 16px;
+
+    @media (min-width: 700px) {
+      font-size: 20px;
+    }
 
     > li p {
       margin-bottom: 16px;
