@@ -68,7 +68,7 @@ const StyledWrapper = styled.div`
     font-weight: 700;
     font-size: 32px;
     line-height: 1;
-    margin-top: 32px;
+    margin-top: 40px;
     margin-bottom: 16px;
     color: black;
 
@@ -83,7 +83,7 @@ const StyledWrapper = styled.div`
     font-weight: 700;
     font-size: 20px;
     line-height: 1;
-    margin-top: 32px;
+    margin-top: 40px;
     margin-bottom: 16px;
     color: black;
 
