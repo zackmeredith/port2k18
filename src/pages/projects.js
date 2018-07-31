@@ -28,8 +28,7 @@ const StyledPara = styled.p`
 const HeaderWrapper = styled.div`
   margin-top: 96px;
   margin-bottom: 96px;
-  max-width: 600px;
-  padding-right: 2rem;
+  max-width: 540px;
   position: relative;
 `
 
