@@ -8,7 +8,7 @@ const StyledTitle = styled.h1`
   font-weight: 700;
   font-size: 40px;
   line-height: 1;
-  margin-bottom: 16px;
+  margin-top: 32px;
   color: black;
 
   @media (min-width: 700px) {
@@ -18,7 +18,7 @@ const StyledTitle = styled.h1`
 
 const StyledPara = styled.p`
   line-height: 1.5;
-  font-family: europa;
+  font-family: "Europa", sans-serif;
   font-weight: 400;
   color: #666;
   font-size: 16px;

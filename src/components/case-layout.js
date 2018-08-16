@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Link from 'gatsby-link'
 // import { StaticQuery, graphql } from 'gatsby'
 import styled, { keyframes } from 'styled-components'
 import Header from './header'
@@ -58,7 +59,7 @@ const StyledWrapper = styled.div`
     font-weight: 700;
     font-size: 40px;
     line-height: 1;
-    margin-top: 16px;
+    margin-top: 32px;
     margin-bottom: 40px;
     color: black;
     ${'' /* transform: translateY(25%);
@@ -70,7 +71,7 @@ const StyledWrapper = styled.div`
   }
 
   & h2 {
-    font-family: "Europa", serif;
+    font-family: "Europa", sans-serif;
     font-weight: 700;
     font-size: 32px;
     line-height: 1;
@@ -85,7 +86,7 @@ const StyledWrapper = styled.div`
   }
 
   & h3 {
-    font-family: "Europa", serif;
+    font-family: "Europa", sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 1;
@@ -100,7 +101,7 @@ const StyledWrapper = styled.div`
 
   & p {
     line-height: 1.5;
-    font-family: europa;
+    font-family: "Europa", sans-serif;
     font-weight: 400;
     color: #666;
     margin-bottom: 24px;
@@ -115,7 +116,7 @@ const StyledWrapper = styled.div`
     margin-top: 0;
     margin-left: 40px;
     line-height: 1.25;
-    font-family: europa;
+    font-family: "Europa", sans-serif;
     font-weight: 400;
     color: #666;
     margin-bottom: 40px;
@@ -132,6 +133,48 @@ const StyledWrapper = styled.div`
 
   & div > img {
     margin-bottom: 48px;
+  }
+`
+
+const StyledLink = styled(Link)`
+  font-family: "Europa", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  display: block;
+  margin: 80px 0;
+  color: black;
+  font-size: 20px;
+  padding: 24px;
+  border-radius: 4px;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(.54,.09,.11,1);
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.08);
+    opacity: .5;
+    transform: translateY(0);
+    transition: opacity 0.3s cubic-bezier(.54,.09,.11,1), transform 0.3s cubic-bezier(.54,.09,.11,1);
+  }
+
+  &:hover {
+    transform: translateY(-5%);
+
+    &:before {
+      opacity: 1;
+      transform: translateY(2%);
+    }
   }
 `
 
@@ -153,6 +196,7 @@ const CaseLayout = ({ children, data }) => (
       <Header />
       <StyledWrapper>
         {children}
+        <StyledLink to="/projects">Back to projects</StyledLink>
       </StyledWrapper>
     </div>
   </div>

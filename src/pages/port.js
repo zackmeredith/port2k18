@@ -39,7 +39,7 @@ const StyledTitle = styled.h1`
 
 const StyledPara = styled.p`
   line-height: 1.5;
-  font-family: europa;
+  font-family: "Europa", sans-serif;
   font-weight: 400;
   color: #666;
   font-size: 16px;

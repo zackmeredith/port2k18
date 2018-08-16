@@ -70,12 +70,12 @@ const BaseWorkItem = ({ image, title, type, brand, link, fullWide }) => (
           flex: 3,
           width: '100%',
         }}>
-        <h3 style={{ fontFamily: 'Europa', marginBottom: 0, fontSize: 16, fontWeight: 700 }}>{title}</h3>
+        <h3 style={{ fontFamily: '"Europa", sans-serif', marginBottom: 0, fontSize: 16, fontWeight: 700 }}>{title}</h3>
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', }}>
 
             <span style={{
-              fontFamily: 'europa',
+              fontFamily: '"Europa", sans-serif',
               fontSize: '12px',
               color: '#999',
               fontWeight: '400',
