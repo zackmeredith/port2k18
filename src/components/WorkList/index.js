@@ -3,6 +3,7 @@ import WorkItem from './partials/WorkItem'
 import dscover from '../../pages/pivotus-design-system/assets/header.jpg'
 import famiscover from '../../img/covers/famis.jpg'
 import nrdccover from '../../img/covers/nrdc.jpg'
+import echocover from '../../img/covers/echo.jpg'
 import engagecover from '../../img/covers/engage.jpg'
 import agentselectioncover from '../../pages/engage-agent-selection/assets/exploreHeader.jpg'
 import customerappcover from '../../pages/engage-customer/assets/header.jpg'
@@ -10,6 +11,7 @@ import customerappcover from '../../pages/engage-customer/assets/header.jpg'
 const brands = {
     pivotus: 'pivotus',
     nrdc: 'nrdc',
+    echo: 'echo',
     famis: 'famis',
 }
 
@@ -53,6 +55,7 @@ const WorkList = () => (
 
       <WorkItem title="Engage Dashboard" image={engagecover} brand={brands.pivotus} type="Product Design, Research, Front-end" />
       <WorkItem title="NRDC Campaigns" brand={brands.nrdc} image={nrdccover} type="Visual, Motion, Front-end" />
+      <WorkItem title="Echo & Co" brand={brands.echo} image={echocover} type="Visual, Product design, Research, Front-end" />
       <WorkItem title="LOYNO: FAMIS" brand={brands.famis} image={famiscover} type="Design, Development"/>
 
     </div>

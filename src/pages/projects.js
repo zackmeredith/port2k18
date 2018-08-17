@@ -48,11 +48,16 @@ const StyledAnchor = styled.a`
   background-image: linear-gradient(140deg, rgb(255, 71, 77), rgb(255, 71, 77));
   background-position: 0 100%;
   background-repeat: repeat-x;
-  background-size: 8px 0px;
-  ${'' /* transition: background-size .25s ease-in-out; */}
+  background-size: 8px 1px;
+
+  transition: color .15s ease-out;
 
   &:hover {
-    background-size: 8px 1px;
+    color: #FF474D;
+  }
+
+  @media (min-width: 700px) {
+    color: #EBECED;
   }
 `
 const Port = () => (
