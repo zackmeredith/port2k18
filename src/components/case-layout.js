@@ -61,18 +61,28 @@ const StyledWrapper = styled.div`
   }
 
   & blockquote {
-    margin-top: 72px;
-    margin-bottom: 80px;
+    margin-top: 48px;
+    margin-bottom: 56px;
     border-left: 4px solid rgb(255, 71, 77);
     margin-left: 0;
-    padding-left: 48px;
+    padding-left: 32px;
+
+    @media (min-width: 700px) {
+      margin-top: 72px;
+      margin-bottom: 80px;
+      padding-left: 48px;
+    }
 
     p {
-      font-size: 48px;
+      font-size: 32px;
       line-height: 1.25;
       font-family: "utopia-std", serif;
       font-weight: 700;
       color: #000;
+
+      @media (min-width: 700px) {
+        font-size: 48px;
+      }
 
     }
   }
