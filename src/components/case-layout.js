@@ -62,10 +62,12 @@ const StyledWrapper = styled.div`
 
   & blockquote {
     margin-top: 48px;
+    margin-right: 0;
     margin-bottom: 56px;
-    border-left: 4px solid rgb(255, 71, 77);
     margin-left: 0;
+    border-left: 4px solid rgb(255, 71, 77);
     padding-left: 32px;
+
 
     @media (min-width: 700px) {
       margin-top: 72px;
