@@ -37,6 +37,8 @@ const StyledWrapper = styled.div`
     width: calc(100% + 4rem);
     margin-left: calc(-2rem);
     margin-right: calc(-2rem);
+    margin-top: 64px;
+    margin-bottom: 64px;
 
     @media (min-width: 700px) {
       width: calc(100% + 16rem);
@@ -45,13 +47,34 @@ const StyledWrapper = styled.div`
     }
   }
 
+  & strong {
+    color: #000;
+  }
+
   & hr {
-    border: 0,
-    height: 1,
-    width: '100%',
-    marginTop: 16,
-    marginBottom: 16,
-    background: '#E6E1E1',
+    border: 0;
+    height: 1;
+    width: '100%';
+    margin-top: 16;
+    margin-bottom: 16;
+    background: '#E6E1E1';
+  }
+
+  & blockquote {
+    margin-top: 72px;
+    margin-bottom: 80px;
+    border-left: 4px solid rgb(255, 71, 77);
+    margin-left: 0;
+    padding-left: 48px;
+
+    p {
+      font-size: 48px;
+      line-height: 1.25;
+      font-family: "utopia-std", serif;
+      font-weight: 700;
+      color: #000;
+
+    }
   }
 
   & h1 {
@@ -132,6 +155,7 @@ const StyledWrapper = styled.div`
   }
 
   & div > img {
+    margin-top: 24px;
     margin-bottom: 48px;
   }
 `

@@ -26,17 +26,17 @@ const WorkList = () => (
     <div style={{
       paddingBottom: "2rem",
     }}>
-      <WorkItem fullWide title="Engage — Customer app" image={customerappcover} brand={brands.pivotus} link="/engage-customer" type="Product Design" />
+      <WorkItem fullWide title="Engage — Dashboard" image={dashcover} brand={brands.pivotus} link="/engage-dashboard" type="Product Design, Research, Front-end" />
     </div>
     <div style={{
       paddingBottom: "2rem",
     }}>
-      <WorkItem fullWide title="Pivotus Design System" image={dscover} brand={brands.pivotus} link="/pivotus-design-system" type="Product Design, Front-end" />
+      <WorkItem fullWide title="Engage — Customer app" image={customerappcover} brand={brands.pivotus} link="/engage-customer" type="Product Design" />
     </div>
     <div style={{
       paddingBottom: "4rem",
     }}>
-      <WorkItem fullWide title="Engage — Dashboard" image={dashcover} brand={brands.pivotus} link="/engage-dashboard" type="Product Design, Research, Front-end" />
+      <WorkItem fullWide title="Pivotus Design System" image={dscover} brand={brands.pivotus} link="/pivotus-design-system" type="Product Design, Front-end" />
     </div>
   <div style={{
     display: 'flex',
