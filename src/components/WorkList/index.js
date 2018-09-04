@@ -1,6 +1,6 @@
 import React from 'react'
 import WorkItem from './partials/WorkItem'
-import dscover from '../../pages/pivotus-design-system/assets/header.jpg'
+import dscover from '../../pages/pivotus-design-system/assets/header.png'
 import famiscover from '../../img/covers/famis.jpg'
 import nrdccover from '../../img/covers/nrdc.jpg'
 import echocover from '../../img/covers/echo.jpg'
