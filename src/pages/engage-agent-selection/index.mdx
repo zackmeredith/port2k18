@@ -14,6 +14,29 @@ import explorePlan from './assets/explore-plan.png'
 ---
 <br />
 
+## Crafting the right connection
+
+The heart of Engage is the ongoing relationship between customer and their agent at their financial institution. Connecting with the right agent greatly influences what a customer is able to get out of the app. Many of these relationships are extensions from the branch, but we also connected and created new relationships.
+
+The previous solution dropped customers right into a choice without enough context and didn't give them flexible ways to find what was best for them in an simple, informed way.
+
+### Overview
+
+- **Problem** —
+Users were dropping off during onboarding when they hit agent selection. Our customer financial institutions also had different operating models that contributed to wanting to surface agents in different ways.
+
+
+- **The users** —
+Main focus was new customers who were going through agent selection for the first time. It also needed to work for choosing a new agent.
+
+### Goals
+
+- **Reduce onboarding dropoff** —
+Customers were dropping off when they hit agent selection. Maybe more context would help?
+
+- **Connect customers with the right agent** — 
+Allow customers to find an agent that better suits their needs or desired type of relationship.
+
 ## Understanding
 
 To get a better idea of why someone might choose an agent we sent out a survey to the users of our pilot app.
@@ -84,15 +107,16 @@ I was also designing the second prototype in parallel. This prototype was focuse
 
 The initial flow was comprised of a few main parts:
 
-- An educational modal explaining what agent selection meant.
+- **Educational modal** — explaining what agent selection means
   - This choice isn’t forever, but this person is with you for as long as you want
-- The main selection home screen
+  - It added context that we wrongly assumed was there for first time users
+- **Agent selection home screen**
   - A powerful search bar for names, locations, and expertise
   - A list of currently available agents
     - These are for the people who just need and are less concerned with where it comes from
   - A list of cards that link to expertise pages
   - A Near You section for finding an local agent
-- Expertise pages explaining the expertise and returning a searchable list of agents with that tag
+- **Expertise pages** — explaining the type of expertise and returning a searchable list of agents with that tag
 
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1529440583921_Screenshot+2018-06-18+14.58.25.png)
@@ -106,6 +130,12 @@ When bringing these designs to a higher fidelity I also made more considerations
 I also brought the "Pick an agent for me" into the main page as well instead of just the modal. For someone who quickly dismissed the modal or decided they just wanted to get help quickly this could be very valuable.
 
 <img className={'full-width'} style={{flex: 1, display: 'block', height: 'auto'}} src={explore4} />
+
+### Escape hatches
+
+I also added *escape hatches* for users who might not have as much of a preference. A great piece of learning I had when talking with users was that not everyone cared about the relationship as much as others.
+
+For users who just wanted to get started they could with the "**Pick one for me**" button in the modal. For those who quickly dismiss the modal or those who decide afterword that they don't want to deal with the decision I added the escape hatch at the bottom of the screen.
 
 ## Short, Medium, Long goals
 To ensure we could actually implement the features how we envisioned them I created a 3 step approach to work towards our full design.
@@ -125,3 +155,12 @@ While it's not something we can implement immediately, having a north star allow
 We've built phase one of the plan and are refining an intermediary step before building phase the second phase.
 
 An important takeaway/reminder from this for me was that interaction models that excite team members should always be checked with external people as well. Just because something is interesting doesn't make it more useful.
+
+### What’s exciting isn’t always best
+Testing early and often will keep the team in check when creating new interface patterns.
+
+### Create context
+Since implementing the explainer modal we’ve seen a reduction in dropoff during onboarding.
+
+### Maintain momentum
+Leaving high-level sessions with tangible artifacts will often keep project motivation from slipping. Also spending time on the future vision not only helps to plan better for it, but also gives the team something to be excited about and work towards.
