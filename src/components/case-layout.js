@@ -199,6 +199,16 @@ const StyledWrapper = styled.div`
     margin-top: 24px;
     margin-bottom: 48px;
   }
+
+  & p > img {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: 700px) {
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+  }
 `
 
 const StyledLink = styled(Link)`
