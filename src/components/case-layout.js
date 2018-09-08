@@ -47,6 +47,35 @@ const StyledWrapper = styled.div`
     }
   }
 
+  & .callout-card {
+    padding: 24px;
+    box-shadow: 0 4px 24px -2px rgba(0,0,0, 0.08);
+    margin-top: 48px;
+    margin-bottom: 48px;
+    border-left: 4px solid rgb(255, 71, 77);
+
+    ul {
+      ${'' /* margin-left: 0; */}
+
+    }
+
+    & h3:first-child {
+      margin-top: 0;
+    }
+
+    & ul:first-child {
+      padding-top: 0;
+    }
+
+    & ul:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 700px) {
+      padding: 48px;
+    }
+  }
+
   & strong {
     color: #000;
   }
