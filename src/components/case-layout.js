@@ -47,6 +47,21 @@ const StyledWrapper = styled.div`
     }
   }
 
+  & .gifWrapper {
+    max-height: 600px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @media (min-width: 700px) {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    & p img {
+      max-height: 540px;
+    }
+  }
+
   & .callout-card {
     padding: 24px;
     box-shadow: 0 4px 24px -2px rgba(0,0,0, 0.08);

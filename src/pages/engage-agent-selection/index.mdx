@@ -110,6 +110,8 @@ I then created a clickable prototype to test the usefulness of this interface an
 
 While most people who tested the conversational onboarding found it interesting or novel, not many found it more useful for actually accomplishing the goal.
 
+Many people wanted to go back to a specific step or more quickly navigate to another area of expertise or location. Trying to create paths for all of these options made it feel like we were pushing against the grain — maybe another pattern was needed.
+
 
 ### Exploratory Prototype
 I was also designing the second prototype in parallel. This prototype was focused on a more exploratory model of interaction — giving the user a way to explore multiple different refinements such as locations or expertise in succession or together.
@@ -140,11 +142,24 @@ This prototype allowed for much more flexible use cases and seemed to fit with h
 
 ## Solution design
 
-When bringing these designs to a higher fidelity I also made more considerations around copywriting. I tried to make the empty states of the input fields better represent the idea that they aren't all necessary to show results while also keeping the placeholder hints around what type of information should be entered.
+In the hi-fi designs I used primary theme colors to both draw attention to the header area and allow customers financial institutions space to express their branding. I introduced the expanding header to allow customers to still scroll and reference information on the page while searching and to set foundation for a future search experience.
 
-I also brought the "Pick an agent for me" into the main page as well instead of just the modal. For someone who quickly dismissed the modal or decided they just wanted to get help quickly this could be very valuable.
+As I tested these designs I found that people were diving into multiple pieces of expertise or locations. We considered things like geolocation to more quickly show local agents, but it didn't make sense for two reasons: we never use location again (and didn't want to ask for data we didn't need) and there are situations in which your location may not be where you want your agent to be. We decided to instead give control to the user.
 
 <img className={'full-width'} style={{flex: 1, display: 'block', height: 'auto'}} src={explore4} />
+
+When bringing these designs to a higher fidelity I also made more considerations around copywriting. I tried to make the empty states of the input fields better represent the idea that they aren't all necessary to show results while also keeping the placeholder hints around what type of information should be entered.
+
+I also introduced subtle animations in places like the search button to convey that not all information had to be entered to search by drawing more attention to it after the first input.
+
+<div className={'gifWrapper'} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundImage: 'linear-gradient(180deg, #FFFFFF 0%, #FCFDFF 40%, #F2F4F7 100%)' }}>
+
+![](https://d2mxuefqeaa7sj.cloudfront.net/s_CF5478BDBE35B8BD39AE131780CC0BFF08DB439306B2B918D99DC67596F98047_1536622645584_explore_header.gif)
+
+</div>
+
+I brought the "Pick an agent for me" into the main page as well instead of just the modal. For someone who quickly dismissed the modal or decided they just wanted to get help quickly this could be very valuable.
+
 
 ### Escape hatches
 
