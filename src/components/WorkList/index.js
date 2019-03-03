@@ -31,12 +31,12 @@ const WorkList = () => (
     <div style={{
       paddingBottom: "2rem",
     }}>
-      <WorkItem fullWide title="Engage — Customer app" image={customerappcover} brand={brands.pivotus} link="/engage-customer" type="Product Design" />
+      <WorkItem fullWide title="Pivotus Design System" image={dscover} brand={brands.pivotus} link="/pivotus-design-system" type="Product Design, Front-end" />
     </div>
     <div style={{
       paddingBottom: "4rem",
     }}>
-      <WorkItem fullWide title="Pivotus Design System" image={dscover} brand={brands.pivotus} link="/pivotus-design-system" type="Product Design, Front-end" />
+      <WorkItem fullWide title="Engage — Customer app" image={customerappcover} brand={brands.pivotus} link="/engage-customer" type="Product Design" />
     </div>
   <div style={{
     display: 'flex',
@@ -49,7 +49,7 @@ const WorkList = () => (
     background: "rgb(255, 71, 77)",
     marginRight: '16px',
   }} />
-  <p style={{ fontSize: '16px', fontFamily: '"Europa", sans-serif' }}>Other projects (by request)</p>
+  <p style={{ fontSize: '16px', fontFamily: '"Europa", sans-serif' }}>Other work</p>
   </div>
 
 

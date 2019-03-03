@@ -138,11 +138,11 @@ The familiar approach of navigating teams/agents allowed those on the pilot to h
 We wanted to deliver more value to our users at our customer financial institutions, but we didn't have a lot of spare time while pushing to launch Engage. This is a short overview of some features on in that spirit. I worked to thoughtfully repurpose components and interfaces to improve the working lives of our users in a way that could actually be delivered.
 
 ### Mass Messaging
-Message all or a subset of customers. I repurposed interface where needed and used the overlay approach so that what we introduced would require reworking of the list components.
+Message all or a subset of customers. I repurposed interface elements where needed and used the overlay approach so that what we introduced would require reworking of the list components.
 
 I set up the panel to be a foundation for the future — where later on different subsets of customers or groups could be messaged.
 
-I also thought through how someone would feel if a person not represented in the chat sent them a message. We conducted some interviews with customers about these sentiments and through this I decided to use our automated message style for all manager mass messages.
+We also thought through how someone would feel if a person not represented in the chat sent them a message. We conducted some interviews with customers about these sentiments and through this we decided to use our automated message style for all manager mass messages.
 
 <img className={'full-width'} style={{marginTop: 0, marginBottom: 0, flex: 1, display: 'block', height: 'auto', boxShadow: '0 16px 32px -8px rgba(0,0,0,0.06)'}} src={massmess} />
 <br /><br />
@@ -156,7 +156,7 @@ For compliance reasons, reviewers still needed to access these things while cust
 <br /><br />
 
 ### Redacted Messages
-Sometimes a message needs to be erased, but compliance needs a record of it. I solved this by replacing the contents of the message in the database with an HTML character. This was a simple build that allowed us to quickly solve the problem.
+Sometimes a message needs to be erased, but compliance needs a record of it. We solved this by replacing the contents of the message in the database with an HTML character. This was a simple build that allowed us to quickly solve the problem.
 
 Employees are able to easily record the reason for the redaction as well. We introduced this as a piece of friction as well. You don't want someone to accidentally erase a message so we require the reasoning so the user thinks it through.
 
