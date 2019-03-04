@@ -286,7 +286,7 @@ const CaseLayout = ({ children, data }) => (
       <Header />
       <StyledWrapper>
         {children}
-        <StyledLink to="/projects">Back to projects</StyledLink>
+        <StyledLink to="/work">Back to projects</StyledLink>
       </StyledWrapper>
     </div>
   </div>

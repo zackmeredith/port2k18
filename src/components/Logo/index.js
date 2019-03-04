@@ -12,6 +12,20 @@ const rotate360 = keyframes`
   }
 `
 
+const rotate3602 = keyframes`
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.05);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+`
+
 const opacityAnim = keyframes`
   0% {
     opacity: 0;
@@ -39,6 +53,10 @@ const StyledLogo = styled.div`
   display: inline-block;
   transform-origin: center;
   animation: ${rotate360} 10s linear infinite;
+
+  &:hover {
+    animation: ${rotate3602} 2s ease-in infinite;
+  }
 `;
 
 const Logo = () => (

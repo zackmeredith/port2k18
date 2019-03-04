@@ -45,21 +45,32 @@ const StyledAnchor = styled.a`
   color: #FF474D;
   padding-bottom: 2px;
   text-decoration: none;
-  background-image: linear-gradient(140deg, rgb(255, 71, 77), rgb(255, 71, 77));
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 8px 1px;
+  position: relative;
 
-  transition: color .15s ease-out;
+  &:after {
+    content: ' ';
+    position: absolute;
+    display: block;
+    left: .5px;
+    right: 0;
+    top: 100%;
+    bottom: 0;
+    width: 100%;
+    background-color: #FF474E;
+    height: 1px;
+    z-index: 1;
+    transition: all .15s ease-in;
+    transform: translateY(0px);
+  }
 
   &:hover {
-    color: #FF474D;
-  }
 
-  @media (min-width: 700px) {
-    color: #EBECED;
+    &:after {
+      transform: translateY(2px);
+    }
   }
 `
+
 const Port = () => (
   <PageLayout>
     <StyledWrapper>
