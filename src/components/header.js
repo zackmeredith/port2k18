@@ -66,8 +66,16 @@ const Nav = styled.nav`
       animation: ${dashAnim} .35s 1.25s cubic-bezier(.54,.09,.11,1) backwards;
     }
 
-    &:hover {
+    @media (min-width: 700px) {
+      &:hover {
 
+        &:before {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &:focus {
       &:before {
         transform: translateX(0);
       }
