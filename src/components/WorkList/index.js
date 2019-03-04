@@ -6,6 +6,7 @@ import nrdccover from '../../img/covers/nrdc.jpg'
 import echocover from '../../img/covers/echo.jpg'
 import dashcover from '../../pages/engage-dashboard/assets/header.png'
 import skubacover from  '../../img/covers/skubacover.jpg'
+import welcomecover from '../../pages/zero-welcome/assets/header.jpg'
 import agentselectioncover from '../../pages/engage-agent-selection/assets/exploreHeader.jpg'
 import customerappcover from '../../pages/engage-customer/assets/header.jpg'
 
@@ -22,6 +23,11 @@ const WorkList = () => (
       paddingBottom: "2rem",
     }}>
       <WorkItem fullWide title="Engage — Agent Selection" image={agentselectioncover} brand={brands.pivotus} link="/engage-agent-selection" type="Product Design" />
+    </div>
+    <div style={{
+      paddingBottom: "2rem",
+    }}>
+      <WorkItem fullWide title="Zero — Welcome" image={welcomecover} brand={brands.zero} link="/zero-welcome" type="Product Design" />
     </div>
     <div style={{
       paddingBottom: "2rem",
