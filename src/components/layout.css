@@ -5,6 +5,8 @@ html {
 }
 body {
   margin: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+
 }
 html, body {
   max-width: 100%;

@@ -15,11 +15,11 @@ const opacityAnim = keyframes`
 
 const dashAnim = keyframes`
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
-    transform: translateX(-3rem);
+    transform: translate3d(-3rem, 0, 0);
   }
 `
 
@@ -38,7 +38,6 @@ const StyledWrapper = styled.div`
 const Nav = styled.nav`
   opacity: 0;
   animation: ${opacityAnim} .35s .15s linear forwards;
-  transform-style: preserve-3d;
 
   & a {
     color: #000;
@@ -63,7 +62,7 @@ const Nav = styled.nav`
       height: 1px;
       z-index: 1;
       transition: transform .15s ease-in;
-      transform: translateX(-3rem);
+      transform: translate3d(-3rem, 0, 0);
       transform-style: preserve-3d;
       animation: ${dashAnim} .35s 1.25s cubic-bezier(.54,.09,.11,1) backwards;
     }
@@ -72,16 +71,16 @@ const Nav = styled.nav`
       &:hover {
 
         &:before {
-          transform: translateX(0);
+          transform: translate3d(0, 0, 0);
         }
       }
     }
 
-    &:focus {
+    /* &:focus {
       &:before {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
       }
-    }
+    } */
   }
 `
 
