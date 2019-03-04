@@ -121,6 +121,7 @@ const StyledWrapper = styled.div`
   padding: 0 2rem;
   position: relative;
   opacity: 0;
+  /* transform-style: preserve-3d; */
   animation: ${opacityAnim} .5s .15s ease-in-out forwards;
 
   @media (min-width: 700px) {
@@ -139,6 +140,7 @@ const StyledWrapper = styled.div`
     opacity: 0;
     ${'' /* transform: scaleX(0); */}
     ${'' /* transform-origin: right; */}
+    transform-style: preserve-3d;
     animation: ${squareBeforeAnim} .75s 1.75s ease-in forwards;
 
     @media (min-width: 700px) {
@@ -156,6 +158,7 @@ const StyledWrapper = styled.div`
     height: 200%;
     background-color: #fff;
     transform: translateX(-100%) scaleX(3);
+    transform-style: preserve-3d;
     animation: ${squareAfterAnim} 4.5s .15s cubic-bezier(.54,.09,.11,1) forwards;
   }
 `
@@ -168,6 +171,7 @@ const StyledTitle = styled.h1`
   margin-bottom: 16px;
   color: black;
   transform: translateY(100%);
+  transform-style: preserve-3d;
   animation: ${slideUp} 1.4s cubic-bezier(.54,.09,.11,1) forwards;
   animation-delay: 1s;
 

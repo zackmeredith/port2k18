@@ -38,6 +38,7 @@ const StyledWrapper = styled.div`
 const Nav = styled.nav`
   opacity: 0;
   animation: ${opacityAnim} .35s .15s linear forwards;
+  transform-style: preserve-3d;
 
   & a {
     color: #000;
@@ -61,8 +62,9 @@ const Nav = styled.nav`
       background-color: #FF474E;
       height: 1px;
       z-index: 1;
-      transition: all .15s ease-in;
+      transition: transform .15s ease-in;
       transform: translateX(-3rem);
+      transform-style: preserve-3d;
       animation: ${dashAnim} .35s 1.25s cubic-bezier(.54,.09,.11,1) backwards;
     }
 
