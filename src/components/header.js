@@ -18,7 +18,7 @@ const dashAnim = keyframes`
     transform: translate3d(0, 0, 0);
   }
 
-  100% {
+  50%, 100% {
     transform: translate3d(-3rem, 0, 0);
   }
 `
@@ -63,8 +63,7 @@ const Nav = styled.nav`
       z-index: 1;
       transition: transform .15s ease-in;
       transform: translate3d(-3rem, 0, 0);
-      transform-style: preserve-3d;
-      animation: ${dashAnim} .35s 1.25s cubic-bezier(.54,.09,.11,1) backwards;
+      animation: ${dashAnim} .7s 1.25s cubic-bezier(.54,.09,.11,1) backwards;
     }
 
     @media (min-width: 700px) {
