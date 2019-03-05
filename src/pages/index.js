@@ -122,7 +122,7 @@ const StyledWrapper = styled.div`
   position: relative;
   opacity: 0;
   /* transform-style: preserve-3d; */
-  animation: ${opacityAnim} .5s .15s ease-in-out forwards;
+  animation: ${opacityAnim} .15s ease-in-out forwards;
 
   @media (min-width: 700px) {
     padding: 0 4rem;
@@ -136,11 +136,11 @@ const StyledWrapper = styled.div`
     left: calc(65%);
     width: 150%;
     height: 150%;
-    background-color: #f9fbfc;
+    background-color: #fAfBfD;
     opacity: 0;
     ${'' /* transform: scaleX(0); */}
     ${'' /* transform-origin: right; */}
-    animation: ${squareBeforeAnim} .75s 1.75s ease-in forwards;
+    animation: ${squareBeforeAnim} .5s 1.75s ease-in forwards;
 
     @media (min-width: 700px) {
       left: calc(55%);
@@ -157,7 +157,7 @@ const StyledWrapper = styled.div`
     height: 200%;
     background-color: #fff;
     transform: translateX(-100%) scaleX(3);
-    animation: ${squareAfterAnim} 4.5s .15s cubic-bezier(.54,.09,.11,1) forwards;
+    animation: ${squareAfterAnim} 4.25s .15s cubic-bezier(.54,.09,.11,1) forwards;
   }
 `
 
@@ -170,7 +170,7 @@ const StyledTitle = styled.h1`
   color: black;
   transform: translateY(100%);
   animation: ${slideUp} 1.4s cubic-bezier(.54,.09,.11,1) forwards;
-  animation-delay: 1s;
+  animation-delay: .75s;
 
   @media (min-width: 700px) {
     font-size: 96px;
@@ -186,7 +186,7 @@ const StyledPara = styled.p`
   margin-bottom: 24px;
   transform: translateY(100%);
   animation: ${slideUp} 1.35s cubic-bezier(.5,0,0,1) forwards;
-  animation-delay: 1.2s;
+  animation-delay: 1s;
 `
 
 // const StyledMask = styled.div`

@@ -59,13 +59,16 @@ const NavItemInner = styled.div`
     background-color: #FF474E;
     height: 1px;
     z-index: 1;
-    transform: translate3d(0, 0, 0);
     animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) forwards;
+    animation-delay: 1.5s;
+
+    .no-delay & {
+      animation-delay: 0;
+    }
   }
 
   .js-loading &:before {
-    /* transform: translate3d(0, 0, 0); */
-    animation-delay: 1.25s;
+    transform: translate3d(0, 0, 0);
   }
 `
 
@@ -86,6 +89,7 @@ const Nav = styled.nav`
     &:hover {
       & ${NavItemInner}:before {
         animation: ${dashAnimR} .15s cubic-bezier(.54,.09,.11,1) forwards;
+        animation-delay: 0;
       }
     }
     &:focused {
@@ -94,40 +98,46 @@ const Nav = styled.nav`
       }
     }
   }
-
 `
 
-
-// function jsAnimFunc() {
-//   if (typeof window !== `undefined`) {
-//   window.addEventListener('load', function () {
-//       document.getElementById('main-nav').classList.add('js-loading');
-//       window.setTimeout(() => {
-//         document.getElementById('main-nav').classList.remove('js-loading');
-//       }, 3000);
-//   }, false);
-//   }
-// }
-
-  if (typeof window !== `undefined`) {
-    window.addEventListener('load', function () {
-        document.getElementById('main-nav').classList.add('js-loading');
-        window.setTimeout(() => {
-          document.getElementById('main-nav').classList.remove('js-loading');
-        }, 3000);
-    }, false);
+const Header = () => {
+  function over(e){
+    e.target.classList.add('no-delay');
   }
+  return (
+    <StyledWrapper>
+      <Logo />
+      <Nav id="main-nav" style={{
+        display: 'flex',
+        alignItems: 'center',
+      }}>
+        <Link id="work-link" onMouseOver={over} to="/work"><NavItemInner>Work</NavItemInner></Link>
+      </Nav>
+    </StyledWrapper>
+  )
+}
 
-const Header = () => (
-  <StyledWrapper>
-    <Logo />
-    <Nav id="main-nav" style={{
-      display: 'flex',
-      alignItems: 'center',
-    }}>
-      <Link to="/work"><NavItemInner>Work</NavItemInner></Link>
-    </Nav>
-  </StyledWrapper>
-)
+if (typeof window !== `undefined`) {
+  document.body.classList.add('js-loading');
+  window.addEventListener('load', function () {
+    // const workLink = document.getElementById('work-link');
+
+    // if (workLink) {
+    //   workLink.addEventListener('mouseout', function(e) {
+    //   //
+    //     e.target.classList.add('no-delay');
+    //     console.log('hello');
+    //     // reset after a short delay
+    //     setTimeout(function() {
+    //       e.target.classList.remove('no-delay');
+    //     }, 500);
+      // }, false);
+    // }
+
+    window.setTimeout(() => {
+      document.body.classList.remove('js-loading');
+    }, 0);
+  }, false);
+}
 
 export default Header

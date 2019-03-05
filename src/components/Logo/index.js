@@ -41,7 +41,8 @@ const opacityAnim = keyframes`
 const AnimWrapper = styled.div`
   opacity: 0;
   transform: scale(.85);
-  animation: ${opacityAnim} .35s .15s linear forwards;
+  animation: ${opacityAnim} .35s linear forwards;
+  animation-play-state: running !important;
 `
 
 const StyledLogo = styled.div`

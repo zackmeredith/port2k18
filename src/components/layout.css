@@ -12,6 +12,13 @@ html, body {
   max-width: 100%;
   overflow: hidden;
 }
+
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused;
+}
+
 article,
 aside,
 details,
