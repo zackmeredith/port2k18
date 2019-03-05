@@ -98,7 +98,10 @@ const Nav = styled.nav`
 
 const Header = () => {
   function over(e){
-    e.target.classList.add('no-delay');
+    document.body.classList.add('no-delay');
+    setTimeout(function() {
+       document.body.classList.remove('no-delay');
+     }, 500);
   }
   return (
     <StyledWrapper>
@@ -107,7 +110,7 @@ const Header = () => {
         display: 'flex',
         alignItems: 'center',
       }}>
-        <Link id="work-link" onMouseOver={over} to="/work"><NavItemInner>Work</NavItemInner></Link>
+        <Link id="work-link" onMouseOver={e => over(e)} to="/work"><NavItemInner>Work</NavItemInner></Link>
       </Nav>
     </StyledWrapper>
   )
