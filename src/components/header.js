@@ -15,20 +15,21 @@ const opacityAnim = keyframes`
 
 const dashAnim = keyframes`
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
 
   100% {
-    transform: translate3d(-3rem, 0, 0);
+    transform: translateX(-48px);
   }
 `
+
 const dashAnimR = keyframes`
   0% {
-    transform: translate3d(-3rem, 0, 0);
+    transform: translateX(-48px);
   }
 
   100% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
 `
 
@@ -48,7 +49,7 @@ const NavItemInner = styled.div`
   position: relative;
 
   &:before {
-    content: ' ';
+    content: '';
     position: absolute;
     display: block;
     left: 0;
@@ -59,7 +60,7 @@ const NavItemInner = styled.div`
     background-color: #FF474E;
     height: 1px;
     z-index: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
     animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) forwards;
     animation-delay: 1.5s;
 
@@ -131,7 +132,7 @@ if (typeof window !== `undefined`) {
     //       e.target.classList.remove('no-delay');
     //     }, 500);
       // }, false);
-    // } 
+    // }
 
     window.setTimeout(() => {
       document.body.classList.remove('js-loading');
