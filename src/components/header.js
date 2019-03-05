@@ -96,12 +96,13 @@ const Nav = styled.nav`
 `
 
 
-
-window.addEventListener('load', function () {
-  window.setTimeout(() => {
-    document.getElementById('main-nav').classList.add('nav-load');
-  }, 2000);
-}, false);
+if (typeof window !== `undefined`) {
+  window.addEventListener('load', function () {
+    window.setTimeout(() => {
+      document.getElementById('main-nav').classList.add('nav-load');
+    }, 2000);
+  }, false);
+}
 
 const Header = () => (
   <StyledWrapper>
