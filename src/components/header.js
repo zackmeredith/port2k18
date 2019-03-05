@@ -35,6 +35,28 @@ const StyledWrapper = styled.div`
   }
 `
 
+const NavItemInner = styled.div`
+  position: relative;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    width: 100%;
+    background-color: #FF474E;
+    height: 1px;
+    z-index: 1;
+    transform: translate3d(-3rem, 0, 0);
+    transition: transform .15s cubic-bezier(.54,.09,.11,1);
+    animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) backwards;
+    animation-delay: 1.25s;
+  }
+`
+
 const Nav = styled.nav`
   opacity: 0;
   animation: ${opacityAnim} .35s .15s linear forwards;
@@ -46,35 +68,8 @@ const Nav = styled.nav`
     line-height: 1;
     font-size: 1rem;
     height: 100%;
+    padding: 1rem;
     text-decoration: none;
-    position: relative;
-
-    &:before {
-      content: ' ';
-      position: absolute;
-      display: block;
-      left: 0;
-      right: 0;
-      top: 50%;
-      bottom: 0;
-      width: 100%;
-      background-color: #FF474E;
-      height: 1px;
-      z-index: 1;
-      transition: transform .15s ease-in;
-      animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) backwards;
-      animation-delay: 1.25s;
-      transform: translate3d(-3rem, 0, 0);
-    }
-
-    @media (min-width: 700px) {
-      &:hover {
-
-        &:before {
-          transform: translate3d(0, 0, 0);
-        }
-      }
-    }
 
     /* &:focus {
       &:before {
@@ -82,16 +77,40 @@ const Nav = styled.nav`
       }
     } */
   }
+
+  &.nav-load {
+    & ${NavItemInner} {
+      &:before {
+        transform: translate3d(-3rem, 0, 0);
+      }
+    }
+
+    @media (min-width: 700px) {
+      & a:hover {
+        & ${NavItemInner}:before {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
 `
+
+
+
+window.addEventListener('load', function () {
+  window.setTimeout(() => {
+    document.getElementById('main-nav').classList.add('nav-load');
+  }, 2000);
+}, false);
 
 const Header = () => (
   <StyledWrapper>
     <Logo />
-    <Nav style={{
+    <Nav id="main-nav" style={{
       display: 'flex',
       alignItems: 'center',
     }}>
-      <Link to="/work">Work</Link>
+      <Link to="/work"><NavItemInner>Work</NavItemInner></Link>
     </Nav>
   </StyledWrapper>
 )
