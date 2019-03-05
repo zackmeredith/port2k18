@@ -68,9 +68,9 @@ const NavItemInner = styled.div`
     }
   }
 
-  .js-loading &:before {
+  /* .js-loading &:before {
     transform: translate3d(0, 0, 0);
-  }
+  } */
 `
 
 const Nav = styled.nav`

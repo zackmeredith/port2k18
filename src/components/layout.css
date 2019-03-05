@@ -17,6 +17,7 @@ html, body {
 .js-loading *:before,
 .js-loading *:after {
   animation-play-state: paused;
+  -webkit-animation: none;
 }
 
 article,
