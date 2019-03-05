@@ -195,6 +195,7 @@ const StyledPara = styled.p`
 //   animation-delay: 2.5s;
 // `
 
+
 const IndexPage = () => (
   <Layout>
     <StyledWrapper>

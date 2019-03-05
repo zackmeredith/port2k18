@@ -22,6 +22,15 @@ const dashAnim = keyframes`
     transform: translate3d(-3rem, 0, 0);
   }
 `
+const dashAnimR = keyframes`
+  0% {
+    transform: translate3d(-3rem, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+`
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -50,9 +59,12 @@ const NavItemInner = styled.div`
     background-color: #FF474E;
     height: 1px;
     z-index: 1;
-    transform: translate3d(-3rem, 0, 0);
-    transition: transform .15s cubic-bezier(.54,.09,.11,1);
-    animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) backwards;
+    transform: translate3d(0, 0, 0);
+    animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) forwards;
+  }
+
+  .js-loading &:before {
+    /* transform: translate3d(0, 0, 0); */
     animation-delay: 1.25s;
   }
 `
@@ -71,38 +83,40 @@ const Nav = styled.nav`
     padding: 1rem;
     text-decoration: none;
 
-    /* &:focus {
-      &:before {
-        transform: translate3d(0, 0, 0);
-      }
-    } */
-  }
-
-  &.nav-load {
-    & ${NavItemInner} {
-      &:before {
-        transform: translate3d(-3rem, 0, 0);
+    &:hover {
+      & ${NavItemInner}:before {
+        animation: ${dashAnimR} .15s cubic-bezier(.54,.09,.11,1) forwards;
       }
     }
-
-    @media (min-width: 700px) {
-      & a:hover {
-        & ${NavItemInner}:before {
-          transform: translate3d(0, 0, 0);
-        }
+    &:focused {
+      & ${NavItemInner}:before {
+        animation: ${dashAnimR} .15s cubic-bezier(.54,.09,.11,1) forwards;
       }
     }
   }
+
 `
 
 
-if (typeof window !== `undefined`) {
-  window.addEventListener('load', function () {
-    window.setTimeout(() => {
-      document.getElementById('main-nav').classList.add('nav-load');
-    }, 2000);
-  }, false);
-}
+// function jsAnimFunc() {
+//   if (typeof window !== `undefined`) {
+//   window.addEventListener('load', function () {
+//       document.getElementById('main-nav').classList.add('js-loading');
+//       window.setTimeout(() => {
+//         document.getElementById('main-nav').classList.remove('js-loading');
+//       }, 3000);
+//   }, false);
+//   }
+// }
+
+  if (typeof window !== `undefined`) {
+    window.addEventListener('load', function () {
+        document.getElementById('main-nav').classList.add('js-loading');
+        window.setTimeout(() => {
+          document.getElementById('main-nav').classList.remove('js-loading');
+        }, 3000);
+    }, false);
+  }
 
 const Header = () => (
   <StyledWrapper>
