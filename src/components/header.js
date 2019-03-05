@@ -131,7 +131,7 @@ if (typeof window !== `undefined`) {
     //       e.target.classList.remove('no-delay');
     //     }, 500);
       // }, false);
-    // }
+    // } 
 
     window.setTimeout(() => {
       document.body.classList.remove('js-loading');
