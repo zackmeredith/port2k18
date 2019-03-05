@@ -59,6 +59,7 @@ const NavItemInner = styled.div`
     background-color: #FF474E;
     height: 1px;
     z-index: 1;
+    transform: translate3d(0, 0, 0);
     animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) forwards;
     animation-delay: 1.5s;
 
