@@ -14,21 +14,21 @@ const opacityAnim = keyframes`
 `
 
 const dashAnim = keyframes`
-  from {
+  0% {
     transform: translateX(0);
   }
 
-  to {
+  100% {
     transform: translateX(-48px);
   }
 `
 
 const dashAnimR = keyframes`
-  from {
+  0% {
     transform: translateX(-48px);
   }
 
-  to {
+  100% {
     transform: translateX(0);
   }
 `
@@ -47,6 +47,7 @@ const StyledWrapper = styled.div`
 
 const NavItemInner = styled.div`
   position: relative;
+  pointer-events: none;
 
   &:before {
     content: '';
@@ -60,25 +61,18 @@ const NavItemInner = styled.div`
     background-color: #FF474E;
     height: 1px;
     z-index: 1;
-    transform: translateX(0);
-    animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) 1.5s forwards;
+    animation: .35s cubic-bezier(.54,.09,.11,1) forwards ${dashAnim};
   }
 
-  .no-delay &:before {
-    animation-delay: 0 !important;
-  }
-  .no-no &:before {
-    animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) 0s forwards;
+  .lag-o &:before {
+    animation-delay: 1.5s;
   }
 
-  /* .js-loading &:before {
-    transform: translate3d(0, 0, 0);
-  } */
 `
 
 const Nav = styled.nav`
   opacity: 0;
-  animation: ${opacityAnim} .35s linear .15s forwards;
+  animation: .35s linear .15s forwards ${opacityAnim};
 
   & a {
     color: #000;
@@ -92,23 +86,13 @@ const Nav = styled.nav`
 
     &:hover {
       ${NavItemInner}:before {
-        animation: ${dashAnimR} .15s cubic-bezier(.54,.09,.11,1) forwards;
+        animation: .15s cubic-bezier(.54,.09,.11,1) forwards ${dashAnimR};
       }
     }
   }
 `
 
 const Header = () => {
-  function out(e){
-    document.body.classList.add('no-no');
-    setTimeout(function() {
-       document.body.classList.remove('no-delay');
-       document.body.classList.remove('no-no');
-     }, 1000);
-  }
-  function over(e){
-    document.body.classList.add('no-delay');
-  }
   return (
     <StyledWrapper>
       <Logo />
@@ -116,17 +100,10 @@ const Header = () => {
         display: 'flex',
         alignItems: 'center',
       }}>
-        <Link id="work-link" to="/work"><NavItemInner onMouseOver={e => over(e)} onMouseOut={e => out(e)}>Work</NavItemInner></Link>
+        <Link id="work-link" to="/work"><NavItemInner>Work</NavItemInner></Link>
       </Nav>
     </StyledWrapper>
   )
-}
-
-if (typeof window !== `undefined`) {
-  document.body.classList.add('js-loading');
-  window.addEventListener('load', function () {
-      document.body.classList.remove('js-loading');
-  }, false);
 }
 
 export default Header
