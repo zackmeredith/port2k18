@@ -93,11 +93,6 @@ const Nav = styled.nav`
         animation-delay: 0;
       }
     }
-    &:focused {
-      & ${NavItemInner}:before {
-        animation: ${dashAnimR} .15s cubic-bezier(.54,.09,.11,1) forwards;
-      }
-    }
   }
 `
 
