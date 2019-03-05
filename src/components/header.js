@@ -14,21 +14,21 @@ const opacityAnim = keyframes`
 `
 
 const dashAnim = keyframes`
-  0% {
+  from {
     transform: translateX(0);
   }
 
-  100% {
+  to {
     transform: translateX(-48px);
   }
 `
 
 const dashAnimR = keyframes`
-  0% {
+  from {
     transform: translateX(-48px);
   }
 
-  100% {
+  to {
     transform: translateX(0);
   }
 `
@@ -61,12 +61,14 @@ const NavItemInner = styled.div`
     height: 1px;
     z-index: 1;
     transform: translateX(0);
-    animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) forwards;
-    animation-delay: 1.5s;
+    animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) 1.5s forwards;
+  }
 
-    .no-delay & {
-      animation-delay: 0;
-    }
+  .no-delay &:before {
+    animation-delay: 0 !important;
+  }
+  .no-no &:before {
+    animation: ${dashAnim} .35s cubic-bezier(.54,.09,.11,1) 0s forwards;
   }
 
   /* .js-loading &:before {
@@ -76,7 +78,7 @@ const NavItemInner = styled.div`
 
 const Nav = styled.nav`
   opacity: 0;
-  animation: ${opacityAnim} .35s .15s linear forwards;
+  animation: ${opacityAnim} .35s linear .15s forwards;
 
   & a {
     color: #000;
@@ -89,20 +91,23 @@ const Nav = styled.nav`
     text-decoration: none;
 
     &:hover {
-      & ${NavItemInner}:before {
+      ${NavItemInner}:before {
         animation: ${dashAnimR} .15s cubic-bezier(.54,.09,.11,1) forwards;
-        animation-delay: 0;
       }
     }
   }
 `
 
 const Header = () => {
-  function over(e){
-    document.body.classList.add('no-delay');
+  function out(e){
+    document.body.classList.add('no-no');
     setTimeout(function() {
        document.body.classList.remove('no-delay');
-     }, 500);
+       document.body.classList.remove('no-no');
+     }, 1000);
+  }
+  function over(e){
+    document.body.classList.add('no-delay');
   }
   return (
     <StyledWrapper>
@@ -111,7 +116,7 @@ const Header = () => {
         display: 'flex',
         alignItems: 'center',
       }}>
-        <Link id="work-link" onMouseOver={e => over(e)} to="/work"><NavItemInner>Work</NavItemInner></Link>
+        <Link id="work-link" to="/work"><NavItemInner onMouseOver={e => over(e)} onMouseOut={e => out(e)}>Work</NavItemInner></Link>
       </Nav>
     </StyledWrapper>
   )
@@ -120,23 +125,7 @@ const Header = () => {
 if (typeof window !== `undefined`) {
   document.body.classList.add('js-loading');
   window.addEventListener('load', function () {
-    // const workLink = document.getElementById('work-link');
-
-    // if (workLink) {
-    //   workLink.addEventListener('mouseout', function(e) {
-    //   //
-    //     e.target.classList.add('no-delay');
-    //     console.log('hello');
-    //     // reset after a short delay
-    //     setTimeout(function() {
-    //       e.target.classList.remove('no-delay');
-    //     }, 500);
-      // }, false);
-    // }
-
-    window.setTimeout(() => {
       document.body.classList.remove('js-loading');
-    }, 0);
   }, false);
 }
 
