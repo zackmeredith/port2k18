@@ -15,21 +15,11 @@ const opacityAnim = keyframes`
 
 const dashAnim = keyframes`
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
-    transform: translateX(-48px);
-  }
-`
-
-const dashAnimR = keyframes`
-  0% {
-    transform: translateX(-48px);
-  }
-
-  100% {
-    transform: translateX(0);
+    transform: translate3d(-48px, 0, 0);
   }
 `
 
@@ -61,11 +51,19 @@ const NavItemInner = styled.div`
     background-color: #FF474E;
     height: 1px;
     z-index: 1;
-    animation: .35s cubic-bezier(.54,.09,.11,1) forwards ${dashAnim};
+    transform-style: preserve-3d;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    transition: transform .35s cubic-bezier(.54,.09,.11,1);
   }
 
   .lag-o &:before {
+    animation: .35s cubic-bezier(.54,.09,.11,1) forwards ${dashAnim};
     animation-delay: 1.5s;
+  }
+  .lag-p &:before {
+    transform: translate3d(-48px, 0, 0);
+    transition: transform .15s cubic-bezier(.54,.09,.11,1);
   }
 
 `
@@ -86,11 +84,19 @@ const Nav = styled.nav`
 
     &:hover {
       ${NavItemInner}:before {
-        animation: .15s cubic-bezier(.54,.09,.11,1) forwards ${dashAnimR};
+        transform: translate3d(0, 0, 0);
       }
     }
   }
 `
+
+if (typeof window !== `undefined`) {
+  document.body.classList.add('js-loading');
+
+  window.addEventListener('load', function () {
+    document.body.classList.remove('js-loading');
+  }, false);
+}
 
 const Header = () => {
   return (
