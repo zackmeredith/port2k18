@@ -7,11 +7,9 @@
 // You can delete this file if you're not using it
 
 exports.onRouteUpdate = ({ location, prevLocation }) => {
-    document.body.classList.add('lag-o');
     document.body.classList.remove('lag-p');
 
     setTimeout(function() {
       document.body.classList.add('lag-p');
-      document.body.classList.remove('lag-o');  
-    }, 1900);
+    }, 1850);
 }

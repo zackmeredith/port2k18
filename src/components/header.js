@@ -13,16 +13,6 @@ const opacityAnim = keyframes`
   }
 `
 
-const dashAnim = keyframes`
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(-48px, 0, 0);
-  }
-`
-
 const StyledWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -57,13 +47,8 @@ const NavItemInner = styled.div`
     transition: transform .35s cubic-bezier(.54,.09,.11,1);
   }
 
-  .lag-o &:before {
-    animation: .35s cubic-bezier(.54,.09,.11,1) forwards ${dashAnim};
-    animation-delay: 1.5s;
-  }
   .lag-p &:before {
     transform: translate3d(-48px, 0, 0);
-    transition: transform .15s cubic-bezier(.54,.09,.11,1);
   }
 
 `
@@ -84,6 +69,7 @@ const Nav = styled.nav`
 
     &:hover {
       ${NavItemInner}:before {
+        transition: transform .15s cubic-bezier(.54,.09,.11,1);
         transform: translate3d(0, 0, 0);
       }
     }
