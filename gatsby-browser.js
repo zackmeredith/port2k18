@@ -11,7 +11,7 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
     document.body.classList.remove('lag-p');
 
     setTimeout(function() {
-      document.body.classList.remove('lag-o');
       document.body.classList.add('lag-p');
+      document.body.classList.remove('lag-o');  
     }, 1900);
 }
