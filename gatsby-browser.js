@@ -11,5 +11,5 @@ exports.onRouteUpdate = ({ location, prevLocation }) => {
 
     setTimeout(function() {
       document.body.classList.add('lag-p');
-    }, 1850);
+    }, 1800);
 }

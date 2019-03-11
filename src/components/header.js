@@ -44,11 +44,15 @@ const NavItemInner = styled.div`
     transform-style: preserve-3d;
     will-change: transform;
     transform: translate3d(0, 0, 0);
-    transition: transform .35s cubic-bezier(.54,.09,.11,1);
+    transition: transform .3s cubic-bezier(.54,.09,.11,1);
   }
 
   .lag-p &:before {
     transform: translate3d(-48px, 0, 0);
+  }
+
+  .navLinkActive &:before {
+    transform: translate3d(0, 0, 0);
   }
 
 `
@@ -73,6 +77,12 @@ const Nav = styled.nav`
         transform: translate3d(0, 0, 0);
       }
     }
+
+    &.navLinkActive:hover {
+      ${NavItemInner}:before {
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 `
 
@@ -92,7 +102,7 @@ const Header = () => {
         display: 'flex',
         alignItems: 'center',
       }}>
-        <Link id="work-link" to="/work"><NavItemInner>Work</NavItemInner></Link>
+        <Link id="work-link" to="/work" activeClassName={"navLinkActive"}><NavItemInner>Work</NavItemInner></Link>
       </Nav>
     </StyledWrapper>
   )
